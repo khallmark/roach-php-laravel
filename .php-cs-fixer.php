@@ -35,6 +35,8 @@ $finder = Finder::create()
     ->files()
     ->in(__DIR__)
     ->exclude('tests/__snapshots__');
+
+$config->setFinder($finder);
 $config->setCacheFile(__DIR__ . '/.build/php-cs-fixer/.php-cs-fixer.cache');
 
 return $config;

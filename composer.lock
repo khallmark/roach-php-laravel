@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "094f53e34e301e49acc168ae00e8fa3c",
+    "content-hash": "da6597a0100907fedddc46c120ce22e8",
     "packages": [
         {
             "name": "brick/math",
@@ -3567,11 +3567,17 @@
         },
         {
             "name": "roach-php/core",
-            "version": "1.0.0",
+            "version": "dev-codex/palmetto-bug-php",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/khallmark/roach-php-core.git",
+                "reference": "767007c22f1c65cfbe71cc4a179ff733b2aac14d"
+            },
             "dist": {
-                "type": "path",
-                "url": "../roach-php-core",
-                "reference": "6effbab8b0cf801a04b04048f590fc2e52f60eca"
+                "type": "zip",
+                "url": "https://api.github.com/repos/khallmark/roach-php-core/zipball/767007c22f1c65cfbe71cc4a179ff733b2aac14d",
+                "reference": "767007c22f1c65cfbe71cc4a179ff733b2aac14d",
+                "shasum": ""
             },
             "require": {
                 "guzzlehttp/guzzle": "^7.8.0",
@@ -3653,10 +3659,16 @@
                 }
             ],
             "description": "A complete web scraping toolkit for PHP",
-            "transport-options": {
-                "symlink": true,
-                "relative": true
-            }
+            "support": {
+                "source": "https://github.com/khallmark/roach-php-core/tree/codex/palmetto-bug-php"
+            },
+            "funding": [
+                {
+                    "type": "github",
+                    "url": "https://github.com/ksassnowski"
+                }
+            ],
+            "time": "2026-06-28T03:03:38+00:00"
         },
         {
             "name": "spatie/laravel-package-tools",
@@ -13222,9 +13234,17 @@
             "time": "2025-12-08T11:19:18+00:00"
         }
     ],
-    "aliases": [],
+    "aliases": [
+        {
+            "package": "roach-php/core",
+            "version": "dev-codex/palmetto-bug-php",
+            "alias": "1.0.0",
+            "alias_normalized": "1.0.0.0"
+        }
+    ],
     "minimum-stability": "stable",
     "stability-flags": {
+        "roach-php/core": 20,
         "roave/security-advisories": 20
     },
     "prefer-stable": true,
