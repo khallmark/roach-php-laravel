@@ -1,6 +1,7 @@
 <?php
 
 use Ergebnis\PhpCsFixer\Config;
+use PhpCsFixer\Finder;
 
 $header = <<<EOF
 Copyright (c) 2024 Kai Sassnowski
@@ -30,7 +31,8 @@ $ruleSet = Config\RuleSet\Php80::create()
 
 $config = Config\Factory::fromRuleSet($ruleSet);
 
-$config->getFinder()
+$finder = Finder::create()
+    ->files()
     ->in(__DIR__)
     ->exclude('tests/__snapshots__');
 $config->setCacheFile(__DIR__ . '/.build/php-cs-fixer/.php-cs-fixer.cache');
