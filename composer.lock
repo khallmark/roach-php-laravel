@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f9c43c91fa8ae43c8a81fce074310938",
+    "content-hash": "094f53e34e301e49acc168ae00e8fa3c",
     "packages": [
         {
             "name": "brick/math",
@@ -2513,105 +2513,6 @@
             "time": "2026-05-11T20:49:54+00:00"
         },
         {
-            "name": "neurotypic-ai/palmetto-bug-php",
-            "version": "1.0.0",
-            "dist": {
-                "type": "path",
-                "url": "../roach-php-core",
-                "reference": "725955e04cd48264fe1cbe373bf6be122ad32dec"
-            },
-            "require": {
-                "guzzlehttp/guzzle": "^7.8.0",
-                "jakeasmith/http_build_url": "^1.0.1",
-                "league/container": "^4.2",
-                "monolog/monolog": "^3.5",
-                "nyholm/psr7": "^1.8.1",
-                "nyholm/psr7-server": "^1.1",
-                "php": "^8.4",
-                "psr/container": "^2.0.2",
-                "psy/psysh": "^0.11.22 || ^0.12.0",
-                "spatie/robots-txt": "^2.0.3",
-                "symfony/console": "^7.0",
-                "symfony/css-selector": "^7.0",
-                "symfony/dom-crawler": "^7.0",
-                "symfony/event-dispatcher": "^7.0",
-                "symfony/options-resolver": "^7.0"
-            },
-            "replace": {
-                "roach-php/core": "self.version"
-            },
-            "require-dev": {
-                "ergebnis/composer-normalize": "^2.45",
-                "ergebnis/php-cs-fixer-config": "^6.45.0",
-                "http-interop/http-factory-guzzle": "^1.2",
-                "phpstan/phpstan": "^2.2.2",
-                "phpunit/phpunit": "^12.5.8",
-                "psr/http-message": "^1.1.0",
-                "roave/security-advisories": "dev-latest",
-                "slim/slim": "^4.12",
-                "spatie/browsershot": "^5.0"
-            },
-            "suggest": {
-                "spatie/browsershot": "Required to execute Javascript in spiders"
-            },
-            "bin": [
-                "roach"
-            ],
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "RoachPHP\\": "src/"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "RoachPHP\\Tests\\": "tests/"
-                }
-            },
-            "scripts": {
-                "post-install-cmd": [
-                    "composer normalize"
-                ],
-                "post-update-cmd": [
-                    "composer normalize"
-                ],
-                "analyze": [
-                    "vendor/bin/phpstan --memory-limit=1G"
-                ],
-                "coding-standards": [
-                    "mkdir -p .build/php-cs-fixer",
-                    "php-cs-fixer fix --diff --verbose"
-                ],
-                "coding-standards-check": [
-                    "mkdir -p .build/php-cs-fixer",
-                    "php-cs-fixer fix --diff --verbose --dry-run"
-                ],
-                "test-server": [
-                    "php -S localhost:8000 -t ./tests/Server"
-                ],
-                "test-watch": [
-                    "vendor/bin/phpunit-watcher watch"
-                ]
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Neurotypic AI"
-                },
-                {
-                    "name": "Kai Sassnowski",
-                    "email": "me@kai-sassnowski.com"
-                }
-            ],
-            "description": "A modernized web scraping toolkit for PHP, forked from Roach PHP",
-            "transport-options": {
-                "symlink": true,
-                "relative": true
-            }
-        },
-        {
             "name": "nikic/php-parser",
             "version": "v5.7.0",
             "source": {
@@ -3663,6 +3564,99 @@
                 "source": "https://github.com/ramsey/uuid/tree/4.9.3"
             },
             "time": "2026-06-18T03:57:49+00:00"
+        },
+        {
+            "name": "roach-php/core",
+            "version": "1.0.0",
+            "dist": {
+                "type": "path",
+                "url": "../roach-php-core",
+                "reference": "6effbab8b0cf801a04b04048f590fc2e52f60eca"
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^7.8.0",
+                "jakeasmith/http_build_url": "^1.0.1",
+                "league/container": "^4.2",
+                "monolog/monolog": "^3.5",
+                "nyholm/psr7": "^1.8.1",
+                "nyholm/psr7-server": "^1.1",
+                "php": "^8.4",
+                "psr/container": "^2.0.2",
+                "psy/psysh": "^0.11.22 || ^0.12.0",
+                "spatie/robots-txt": "^2.0.3",
+                "symfony/console": "^7.0",
+                "symfony/css-selector": "^7.0",
+                "symfony/dom-crawler": "^7.0",
+                "symfony/event-dispatcher": "^7.0",
+                "symfony/options-resolver": "^7.0"
+            },
+            "require-dev": {
+                "ergebnis/composer-normalize": "^2.45",
+                "ergebnis/php-cs-fixer-config": "^6.45.0",
+                "http-interop/http-factory-guzzle": "^1.2",
+                "phpstan/phpstan": "^2.2.2",
+                "phpunit/phpunit": "^12.5.8",
+                "psr/http-message": "^1.1.0",
+                "roave/security-advisories": "dev-latest",
+                "slim/slim": "^4.12",
+                "spatie/browsershot": "^5.0"
+            },
+            "suggest": {
+                "spatie/browsershot": "Required to execute Javascript in spiders"
+            },
+            "bin": [
+                "roach"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "RoachPHP\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "RoachPHP\\Tests\\": "tests/"
+                }
+            },
+            "scripts": {
+                "post-install-cmd": [
+                    "composer normalize"
+                ],
+                "post-update-cmd": [
+                    "composer normalize"
+                ],
+                "analyze": [
+                    "vendor/bin/phpstan --memory-limit=1G"
+                ],
+                "coding-standards": [
+                    "mkdir -p .build/php-cs-fixer",
+                    "php-cs-fixer fix --diff --verbose"
+                ],
+                "coding-standards-check": [
+                    "mkdir -p .build/php-cs-fixer",
+                    "php-cs-fixer fix --diff --verbose --dry-run"
+                ],
+                "test-server": [
+                    "php -S localhost:8000 -t ./tests/Server"
+                ],
+                "test-watch": [
+                    "vendor/bin/phpunit-watcher watch"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kai Sassnowski",
+                    "email": "me@kai-sassnowski.com"
+                }
+            ],
+            "description": "A complete web scraping toolkit for PHP",
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
         },
         {
             "name": "spatie/laravel-package-tools",
