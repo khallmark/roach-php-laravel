@@ -19,7 +19,9 @@ use Symfony\Component\Console\Input\InputOption;
 final class SpiderMakeCommand extends GeneratorCommand
 {
     protected $name = 'roach:spider';
+
     protected $description = 'Create a new spider class';
+
     protected $type = 'Spider';
 
     protected function getStub(): string
@@ -37,7 +39,7 @@ final class SpiderMakeCommand extends GeneratorCommand
         return [
             [
                 'force',
-                null,
+                '',
                 InputOption::VALUE_NONE,
                 'Create the class even if the spider already exists',
             ],

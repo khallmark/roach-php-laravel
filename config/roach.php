@@ -4,7 +4,6 @@ use RoachPHP\Http\Client;
 use RoachPHP\Scheduling\ArrayRequestScheduler;
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Request Queue
@@ -15,9 +14,8 @@ return [
     |
     | Needs to implement the RoachPHP\Scheduling\RequestScheduler interface.
     |
-    */
+     */
     'request_queue' => ArrayRequestScheduler::class,
-
     /*
     |--------------------------------------------------------------------------
     | HTTP Client
@@ -28,9 +26,8 @@ return [
     |
     | Needs to implement the RoachPHP\Http\ClientInterface interface.
     |
-    */
+     */
     'client' => Client::class,
-
     /*
     |--------------------------------------------------------------------------
     | Default Spider Namespace
@@ -40,6 +37,6 @@ return [
     | to determine the namespace of spider classes. This should not contain
     | leading or trailing backslashes.
     |
-    */
+     */
     'default_spider_namespace' => 'App\Spiders',
 ];
