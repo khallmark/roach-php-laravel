@@ -30,7 +30,8 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/khallmark/roach-php-core.git"
+            "url": "https://github.com/khallmark/roach-php-core.git",
+            "no-api": true
         }
     ],
     "prefer-stable": true,
