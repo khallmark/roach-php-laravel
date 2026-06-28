@@ -60,7 +60,7 @@ final class RoachServiceProvider extends PackageServiceProvider
             ClientInterface::class,
             static fn (Application $app) => $app->make(config('roach.client')),
         );
-        $this->app->bind(
+        $this->app->singleton(
             RequestSchedulerInterface::class,
             static fn (Application $app) => $app->make(config('roach.request_queue')),
         );

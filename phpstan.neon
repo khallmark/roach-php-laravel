@@ -1,0 +1,13 @@
+includes:
+  - vendor/larastan/larastan/extension.neon
+
+parameters:
+    paths:
+        - src
+        - tests
+
+    excludePaths:
+        analyse:
+            - tests/__snapshots__
+
+    level: 8

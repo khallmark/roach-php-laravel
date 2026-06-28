@@ -16,9 +16,9 @@ Check out the [full documentation](https://roach-php.dev/docs/laravel) to get up
 
 ## Credits
 
+- [Neurotypic AI](https://github.com/neurotypic-ai)
 - [Kai Sassnowski](https://github.com/ksassnowski)
-- [All contributors](https://github.com/roach-php/laravel/contributors)
-
+- [Roach PHP contributors](https://github.com/roach-php/laravel/contributors)
 
 ## License
 
