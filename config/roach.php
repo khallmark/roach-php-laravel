@@ -44,10 +44,35 @@ return [
     | Default Spider Namespace
     |--------------------------------------------------------------------------
     |
-    | The default namespace the `roach:run` and `roach:spider` commands use
-    | to determine the namespace of spider classes. This should not contain
-    | leading or trailing backslashes.
+    | Legacy default namespace used as the final short-name fallback. This key
+    | is still honored for backward compatibility.
     |
      */
     'default_spider_namespace' => 'App\Spiders',
+    /*
+    |--------------------------------------------------------------------------
+    | Additional Spider Namespaces
+    |--------------------------------------------------------------------------
+    |
+    | The roach:run command tries each namespace, in order, when resolving a
+    | short spider name. Package service providers may also register namespaces
+    | at runtime with SpiderNamespaceRegistry::register().
+    |
+    | @var list<string>
+    |
+     */
+    'spider_namespaces' => [
+        // 'App\Spiders',
+    ],
+    /*
+    |--------------------------------------------------------------------------
+    | Laravel Event Bridge
+    |--------------------------------------------------------------------------
+    |
+    | Re-emit Roach core events (RoachPHP\Events\*) onto Laravel's event
+    | dispatcher so applications can use Laravel listeners, queued listeners,
+    | and broadcasting. Set false for stock Symfony-only behavior.
+    |
+     */
+    'bridge_events' => env('ROACH_BRIDGE_EVENTS', true),
 ];

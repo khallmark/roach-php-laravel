@@ -4,6 +4,27 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.0.0] - 2026-06-30
+
+### Added
+
+- Added multi-namespace spider resolution for `roach:run` through `roach.spider_namespaces` and `RoachPHP\Laravel\Resolver\SpiderNamespaceRegistry::register()`.
+- Added a Symfony-to-Laravel event bridge that re-emits Roach core events (`RoachPHP\Events\*`) on Laravel's event dispatcher. This enables Laravel listeners, queued listeners, and broadcasting. Configure with `roach.bridge_events` / `ROACH_BRIDGE_EVENTS`.
+
+### Changed
+
+- `RoachPHP\Shell\Resolver\NamespaceResolverInterface` now resolves to `RoachPHP\Laravel\Resolver\CompositeNamespaceResolver` in Laravel applications.
+- `Symfony\Component\EventDispatcher\EventDispatcher::class` now resolves to `RoachPHP\Laravel\Events\LaravelForwardingEventDispatcher` when event bridging is enabled.
+- `Symfony\Component\EventDispatcher\EventDispatcherInterface::class` and `EventDispatcher::class` now resolve to the same singleton instance.
+- Requires `roach-php/core:^4.0`.
+
+### Backward compatibility
+
+- `default_spider_namespace` is still honored and seeded as the final fallback namespace.
+- Programmatic `Roach::startSpider()` and `Roach::collectSpider()` calls are unchanged.
+- Code binding against concrete `DefaultNamespaceResolverDecorator` should bind against `NamespaceResolverInterface` instead.
+- Code asserting `get_class($dispatcher) === EventDispatcher::class` should use `instanceof EventDispatcher` or disable forwarding with `ROACH_BRIDGE_EVENTS=false`.
+
 ## [3.2.0] - 2025-03-21
 
 ### Added
