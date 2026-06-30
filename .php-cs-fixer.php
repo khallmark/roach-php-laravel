@@ -3,18 +3,9 @@
 use Ergebnis\PhpCsFixer\Config;
 use PhpCsFixer\Finder;
 
-$header = <<<EOF
-Copyright (c) 2024 Kai Sassnowski
-
-For the full copyright and license information, please view
-the LICENSE file that was distributed with this source code.
-
-@see https://github.com/roach-php/laravel
-EOF;
-
 $ruleSet = Config\RuleSet\Php80::create()
-    ->withHeader($header)
     ->withRules(Config\Rules::fromArray([
+        'phpdoc_summary' => false,
         'php_unit_test_class_requires_covers' => false,
         'class_attributes_separation' => [
             'elements' => [
